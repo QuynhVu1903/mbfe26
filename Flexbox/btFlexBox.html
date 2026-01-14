@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: inline-block;
+            flex-direction: column;
+            border: 5px solid dodgerblue;
+        }
+        .container div.row1 {
+            text-align: center;
+            border-bottom: 3px solid dodgerblue;
+        }
+
+        .container div.row2 {
+            display: flex;
+            height: 200px;
+            flex-direction: row;
+            border-bottom: 3px solid dodgerblue;
+        }
+
+        .container div.row3 {
+            text-align: center;
+        }
+
+        .boxChild:last-child {
+            border-right: none;
+        }
+
+        .boxChild {
+            padding: 10px;
+            border-right: 3px solid dodgerblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row1">
+            <h1>My Header</h1>
+        </div>
+        <div class="row2">
+            <div class="boxChild" style="flex-basis: 100px;">
+                <a href="#" target="_blank">Link 1</a><br>
+                <a href="#" target="_blank">Link 2</a><br>
+                <a href="#" target="_blank">Link 3</a>
+            </div>
+            <div class="boxChild" style="flex-shrink: 2;">
+                <h3>Lorem Ipsum</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Possimus cumque temporibus itaque exercitationem quod voluptates
+                    nihil maxime optio nisi unde aperiam harum cupiditate,
+                    minima assumenda! Laudantium dicta aliquid quidem ipsum.</p>
+            </div>
+        </div>
+        <div class="row3">
+            <h4>Footer</h4>
+        </div>
+    </div>
+</body>
+
+</html>
