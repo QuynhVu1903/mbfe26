@@ -13,20 +13,6 @@
         background: #e5e5e5;
         font-family: "Segoe UI", Arial, sans-serif;
     }
-    @media print {
-    body {
-        background: none;
-    }
-
-    .page {
-        page-break-after: always;
-        break-after: page;
-    }
-
-    .page:last-child {
-        page-break-after: auto;
-    }
-}
 
     /* Khung CV A4 */
     .container {
@@ -68,11 +54,11 @@
     }
 
     .childContainer1 {
-        flex: 3.5;
+        flex: 3;
     }
 
     .childContainer2 {
-        flex: 6.5;
+        flex: 7;
     }
 
     .childContainer1 h3 {
@@ -170,11 +156,11 @@
     }
 
     .leftChild {
-        flex: 6.7;
+        flex: 7;
     }
 
     .rightChild {
-        flex: 3.3;
+        flex: 3;
     }
 
 
@@ -231,5 +217,4 @@
         align-items: center;
         margin-right: 25px;
         gap: 5px;
-        font-size: 13px;
     }

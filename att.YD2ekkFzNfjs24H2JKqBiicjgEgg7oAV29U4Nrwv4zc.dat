@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Dự báo thời tiết</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #e3f2fd;
+            text-align: center;
+            padding: 40px;
+        }
+        input {
+            padding: 10px;
+            width: 250px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .weather {
+            margin-top: 20px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🌤️ Tra cứu thời tiết</h1>
+
+    <input type="text" id="city" placeholder="Nhập tên thành phố">
+    <button onclick="getWeather()">Xem thời tiết</button>
+
+    <div id="result" class="weather"></div>
+
+    <script>
+        const API_KEY = "09a71427c59d38d6a34f89b47d75975c";// Chìa khóa truy cập API
+        //Open weather map: Dùng KEY xác định truy cập và cho dữ liệu
+
+        function getWeather() {
+            const city = document.getElementById("city").value;
+            const result = document.getElementById("result");
+
+            if (!city) {
+                result.innerHTML = "❗ Vui lòng nhập tên thành phố";
+                return;
+            }
+
+            const url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${API_KEY}&units=metric&lang=vi`;
+
+            fetch(url) // Gửi request và nhận dữ liệu từ sever
+                .then(response => response.json()) //Dữ liệu trả về JSON đc chuyển về dạng Text
+                .then(data => { //Xử lí dữ liệu trả về   
+                    // data={
+                    //       cod:200
+                    //       city:....
+                    //       list:...}
+                    if (data.cod !== "200") {
+                        result.innerHTML = "❌ Không tìm thấy thành phố";
+                        return;
+                    }
+
+                    const weather = data.list[0];// laays duwx lieu thoi tiet
+                    // data.list la du bao thoi tiet theo tung moc thoi gian
+                    result.innerHTML = `
+                        <h2>${data.city.name}</h2>
+                        <p>🌡️ Nhiệt độ: ${weather.main.temp} °C</p>
+                        <p>💧 Độ ẩm: ${weather.main.humidity}%</p>
+                        <p>🌥️ Thời tiết: ${weather.weather[0].description}</p>
+                        <p>💨 Gió: ${weather.wind.speed} m/s</p>
+                    `;
+                })
+                .catch(error => { // Bắt lỗi khi gọi API
+                    // Chạy khi : + Mất mạng ; + viết sai API ; + API lỗi
+                    result.innerHTML = "⚠️ Lỗi khi lấy dữ liệu";
+                    console.warn(error);//console.log : In ra man hinh console 1 dong chu thong bao
+                                        // console.warn : In ra 1 dong canh bao
+                                        // console.error: in ra 1 dấu X  màu đỏ
+                });
+        }
+    </script>
+
+</body>
+</html>

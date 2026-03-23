@@ -6,185 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <style>
-        * {
-            box-sizing: border-box;
-        }
 
-        body {
-            margin: 0;
-            padding: 8px 0;
-            font-family: "Segoe UI", Arial, sans-serif;
-            background: #f2f2f2;
-            color: #222;
-            line-height: 1.6;
-            margin: 8px;
-        }
-
-        .container {
-            /* display: grid;
-            grid-template-areas:
-                'header header header header header header'
-                'info info info info info info'
-                'intro intro intro intro intro intro'
-                'auto auto auto auto auto auto'; */
-            max-width: auto;
-            gap: 10px;
-            background-color: aliceblue;
-            border: 2px solid gray;
-        }
-
-        .container div {
-            padding: 0px;
-            margin: 10px;
-        }
-
-        .intro h3 {
-            text-align: center;
-            border-bottom: 3px solid rgb(49, 2, 2);
-        }
-
-        .childContainer1 h3 {
-            border-bottom: 3px solid rgb(49, 2, 2);
-        }
-        .childContainer2 h3 {
-            border-bottom: 3px solid rgb(49, 2, 2);
-        }
-        .header {
-            grid-area: header;
-            border: 3px solid rgb(49, 2, 2);
-        }
-
-        .info {
-            grid-area: info;
-            justify-content: center;
-        }
-
-        .intro {
-            grid-area: intro;
-        }
-
-        .skill {
-            grid-area: auto;
-            text-align: left;
-        }
-
-        .cert {
-            grid-area: auto;
-            text-align: left;
-        }
-
-        .lang {
-            grid-area: auto;
-            text-align: left;
-        }
-
-        .study {
-            grid-area: auto;
-            text-align: left;
-        }
-
-        .exper {
-            grid-area: auto;
-            text-align: left;
-
-        }
-
-        .child {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-        }
-
-        .act {
-            grid-area: act;
-        }
-        .childContainer {
-            grid-area: auto;
-        }
-        
-
-
-        @media (max-width: 600px) {
-            .header {
-                grid-area: 1 / span 1;
-            }
-
-            .info {
-                grid-column: 2 / span 1;
-            }
-
-            .intro {
-                grid-area: 3 / span 1;
-            }
-
-            .study {
-                grid-area: 4 / span 1;
-            }
-
-            .exper {
-                grid-area: 5 / span 1;
-            }
-
-            .skill {
-                grid-area: 6 / span 1;
-            }
-
-            .cert {
-                grid-area: 7 / span 1;
-            }
-
-            .lang {
-                grid-area: 8 / span 1;
-            }
-
-            .act {
-                grid-area: 9 / span 1;
-            }
-        }
-        
-        .childContainer {
-            display: flex;
-            flex-direction: row;
-        }
-        .childContainer1 {
-            display: flex;
-            flex-direction: column;
-            border-right: 3px solid rgb(49, 2, 2);
-            margin-right: 10px;
-            text-align: left;
-        }
-        .header {
-            grid-area: header;
-            text-align: center;
-            padding: 25px;
-            height: 160px;
-            ;
-
-        }
-
-        .header p {
-            color: rgb(179, 173, 173);
-        }
-
-
-
-        .info {
-            display: flex;
-            padding: 0;
-            margin: 0;
-            gap: 25px;
-            flex-wrap: wrap;
-        }
-
-        .info li {
-            display: flex;
-            align-items: center;
-            margin-right: 25px;
-        }
-
-    </style>
-
+    <link rel="stylesheet" href="./nhap.css">
 
 </head>
 
@@ -231,19 +54,19 @@
                 phát triển phần mềm.</p>
         </div>
         <div class="childContainer">
-        <div class="childContainer1" style="flex-shrink: 2;">
+        <div class="childContainer1">
         <div class="skill">
             <h3>KỸ NĂNG</h3>
-            <ul style="list-style-type: none;">
+            <ul style="list-style-type:none;">
                 <li>
                     <h4>Tin học văn phòng</h4>
-                    <ul>
+                    <ul style="list-style-type: none;">
                         <li>Sử dụng thành thạo các công cụ Word, Excel, Power Point</li>
                     </ul>
                 </li>
                 <li>
                     <h4>Khả năng chịu áp lực công việc</h4>
-                    <ul>
+                    <ul style="list-style-type: disc;">
                         <li> Luôn cố gắng hoàn thành công việc đúng hạn
                             ngay cả trong điều kiện áp lực cao, xem thử
                             thách là cơ hội để rèn luyện bản thân. </li>
@@ -263,19 +86,19 @@
             <h3 class="duongke">NGÔN NGỮ</h3>
             <ul style="list-style-type: none;">
                 <li><b>Tiếng Trung QUỐC</b>
-                    <ul>
+                    <ul style="list-style-type: disc;">
                         <li>Sử dụng thành thạo ngôn ngữ Trung Quốc.</li>
                         <li>Chứng chỉ tiếng Trung HSK6</li>
                     </ul>
                 </li>
                 <li><b>Tiếng Anh</b>
-                    <ul>
+                    <ul style="list-style-type: none;">
                         <li> Giao tiếp tiếng Anh cơ bản, thành thạo
                             kĩ năng nghe, đọc, viết.</li>
                     </ul>
                 </li>
                 <li><b>Tiếng Phần Lan</b>
-                    <ul>
+                    <ul style="list-style-type: none;">
                         <li>Trình độ A2 tiếng Phần Lan, có thể giao tiếp cơ
                             bản</li>
                     </ul>
@@ -285,21 +108,21 @@
         </div>
         <div class="childContainer2" >
         <div class="study"> <!--có 3 hộp row-->
-            <h3 class="duongke">HỌC VẤN</h3>
+            <h3>HỌC VẤN</h3>
             <div class="child">
-                <div style="flex-basis: 200px;">
+                <div class="leftChild">
                     <p>Khối Xã hội</p>
                     <p>TRUNG HỌC PHỔ THÔNG CHUYÊN ĐẠI HỌC SƯ PHẠM HÀ NỘI</p>
                     <ul style="list-style-type: none;">
                         <li>Tốt nghiệp loại Giỏi, điểm trung bình 9.1</li>
                     </ul>
                 </div>
-                <div style="flex-shrink: 2;">
+                <div class="rightChild">
                     <p>09/2017 - 06/2020</p>
                 </div>
             </div>
-            <div>
-                <div style="flex-grow: 2;">
+            <div class="child">
+                <div  class="leftChild">
                     <p>Tiếng Trung thương mại</p>
                     <p>ĐẠI HỌC NGOẠI THƯƠNG</p>
                     <ul style="list-style-type: disc;">
@@ -309,12 +132,12 @@
                             lĩnh vực kinh tế, tài chính, giao dịch thương mại quốc tế, logistics.</li>
                     </ul>
                 </div>
-                <div style="flex-grow: 1;">
+                <div class="rightChild">
                     <p>09/2020 - 06/2024</p>
                 </div>
             </div>
-            <div>
-                <div style="flex-grow: 2;">
+            <div class="child"> 
+                <div  class="leftChild">
                     <p>Software Development</p>
                     <p>ĐẠI HỌC KHOA HỌC ỨNG DỤNG HAAGA-HELIA</p>
                     <ul style="list-style-type: disc;">
@@ -324,7 +147,7 @@
                             về cơ sở dữ liệu và SQL. </li>
                     </ul>
                 </div>
-                <div style="flex-grow: 1;">
+                <div class="rightChild">
                     <p>07/2021 - 10/2021</p>
                 </div>
             </div>
@@ -333,9 +156,9 @@
 
 
         <div class="exper"> <!--có 3 hộp row-->
-            <h3 class="duongke">KINH NGHIỆM LÀM VIỆC</h3>
+            <h3>KINH NGHIỆM LÀM VIỆC</h3>
             <div class="child">
-                <div style="flex-grow: 2;">
+                <div  class="leftChild">
                     <p>NHÂN VIÊN XUẤT NHẬP KHẨU</p>
                     <p>CÔNG TY CỔ PHẦN XUẤT NHẬP KHẨU GIA BẢO - SINOTRUK VIỆT
                         NAM</p>
@@ -348,12 +171,12 @@
                         <li>Sắp xếp, lưu trữ hợp đồng xuất nhập khẩu.</li>
                     </ul>
                 </div>
-                <div style="flex-grow: 1;">
+                <div class="rightChild">
                     <p>01/12/2023 - 19/03/2024</p>
                 </div>
             </div>
-            <div>
-                <div style="flex-grow: 2;">
+            <div class="child">
+                <div  class="leftChild">
                     <p> Thực tập sinh chứng từ xuất nhập khẩu</p>
                     <p>CÔNG TY TNHH THƯƠNG MẠI VÀ XUẤT NHẬP KHẨU NAM HOA</p>
                     <ul style="list-style-type: disc;">
@@ -363,12 +186,12 @@
                         <li>Hỗ trợ các công việc giấy tờ khác của bộ phận xuất nhập khẩu.</li>
                     </ul>
                 </div>
-                <div style="flex-grow: 1;">
+                <div class="rightChild">
                     <p>28/08/2023 - 28/10/2023</p>
                 </div>
             </div>
-            <div>
-                <div style="flex-grow: 2;">
+            <div class="child">
+                <div  class="leftChild">
                     <p>Trưởng ban Chuyên môn</p>
                     <p>DỰ ÁN KINH TẾ CHẤM</p>
                     <ul style="list-style-type: disc;">
@@ -379,7 +202,7 @@
                             dự án và tương tác với những người theo dõi</li>
                     </ul>
                 </div>
-                <div style="flex-grow: 1;">
+                <div class="rightChild">
                     <p>07/2021 - 10/2021</p>
                 </div>
             </div>
@@ -387,9 +210,9 @@
 
 
         <div class="act"> <!--có 3 hộp row-->
-            <h3 class="duongke">HOẠT ĐỘNG</h3>
+            <h3>HOẠT ĐỘNG</h3>
             <div class="child">
-                <div style="flex-grow: 2;">
+                <div  class="leftChild">
                     <p>DỰ ÁN SUB YOUTH EDITOR</p>
                     <p>Biên dịch viên tiếng Trung</p>
                     <ul style="list-style-type: disc;">
@@ -399,12 +222,12 @@
                         <li>Truyền tải các thông tin, kiến thức quốc tế đến bạn đọc trong nước.</li>
                     </ul>
                 </div>
-                <div style="flex-grow: 1;">
+                <div class="rightChild">
                     <p>04/2021 - 10/2021</p>
                 </div>
             </div>
-            <div>
-                <div style="flex-grow: 2;">
+            <div class="child">
+                <div  class="leftChild">
                     <p>BẢN TIN XANH - GREEN NEWS</p>
                     <p>Tình nguyện viên</p>
                     <ul style="list-style-type: disc;">
@@ -415,12 +238,12 @@
                             mới nhằm quảng bá thông điệp của dư án.</li>
                     </ul>
                 </div>
-                <div style="flex-grow: 1;">
+                <div class="rightChild">
                     <p>18/05/2021 - 24/05/2021</p>
                 </div>
             </div>
-            <div>
-                <div style="flex-grow: 2;">
+            <div class="child">
+                <div  class="leftChild">
                     <p>ĐOÀN THANH NIÊN CỘNG SẢN HỒ CHÍ MINH PHƯỜNG DỊCH VỌNG
                         HẬU</p>
                     <p>Tình nguyện viên tổ nhập liệu, chăm sóc F0</p>
@@ -428,7 +251,7 @@
                         <li>Tham gia nhập liệu và chăm sóc F0 trên địa bàn phường Dịch Vọng Hậu</li>
                     </ul>
                 </div>
-                <div style="flex-grow: 1;">
+                <div class="rightChild">
                     <p>01/01/2022 - 30/03/2021</p>
                 </div>
             </div>

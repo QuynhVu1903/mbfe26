@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Bảng innerHTML + CSS</title>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    padding: 40px;
+  }
+
+  .table-container {
+    max-width: 600px;
+    margin: auto;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  }
+
+  thead {
+    background: linear-gradient(135deg, #4e73df, #1cc88a);
+    color: white;
+  }
+
+  th, td {
+    padding: 12px;
+    text-align: left;
+  }
+
+  tbody tr {
+    border-bottom: 1px solid #eee;
+    transition: 0.2s;
+  }
+
+  tbody tr:hover {
+    background: #f2f6ff;
+  }
+
+  tbody tr:nth-child(even) {
+    background: #fafafa;
+  }
+</style>
+</head>
+<body>
+
+<div class="table-container">
+  <div id="table-container"></div>
+</div>
+
+<script>
+const data = [
+  { name: "An", age: 20 },
+  { name: "Bình", age: 22 },
+  { name: "Chi", age: 19 }
+];
+
+let html = `
+<table>
+  <thead>
+    <tr>
+      <th>Tên</th>
+      <th>Tuổi</th>
+    </tr>
+  </thead>
+  <tbody>
+`;
+
+data.forEach(item => {
+  html += `
+    <tr>
+      <td>${item.name}</td>
+      <td>${item.age}</td>
+    </tr>
+  `;
+});
+
+html += `
+  </tbody>
+</table>
+`;
+
+document.getElementById("table-container").innerHTML = html;
+</script>
+
+</body>
+</html>
